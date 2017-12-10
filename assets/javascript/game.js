@@ -72,11 +72,35 @@ $(".gem2").click(function(){
 $(".gem3").click(function(){
     score += randomGem3Number;
     $("#gamescore").html(score);
+    
+    if (score > randomGameNumber) {
+        losses++;
+        $("#losses").html("Losses: "+ losses);
+    }
+    else if (score === randomGameNumber) {
+    wins++;
+    $("#wins").html("Wins: " + wins);
+    }
+    else {
+        // do nothing
+    }
 })
 
 $(".gem4").click(function(){
     score += randomGem4Number;
     $("#gamescore").html(score);
+
+    if (score > randomGameNumber) {
+        losses++;
+        $("#losses").html("Losses: "+ losses);
+    }
+    else if (score === randomGameNumber) {
+        wins++;
+        $("#wins").html("Wins: " + wins);
+    }
+    else {
+        // do nothing
+    }
 })
 
 // reset function
