@@ -14,22 +14,83 @@
     background-image: url("regal.png");
     }
 
+    .title {
+        text-align: center;
+        color: #ffffff;
+        background-color: teal;
+        padding: 5px 10px 10px 10px;
+        margin-top: 10px
+    }
+
+    .instructions {
+        background-color: peachpuff;
+        padding: 20px;
+        margin-top: 15px;
+        
+    }
+
+    #gamenumber {
+        text-align: left;
+        font-size: 30px;
+        background-color: mediumspringgreen;
+        height: 96px;
+        margin-top: 15px;
+    }
+
+    .score {
+        text-align: center;
+        background-color: turquoise;
+        padding: 18px;
+        margin: 15px 0 0 0;
+    }
+
+    .gem {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 15px 0 0 0;
+        color: #ffffff;
+    }
+
+    .total {
+        text-align: left;
+        background-color: teal;
+        color: #ffffff;
+        padding: 5px;
+        margin: 15px 0 0 0;
+
+    }
+
+    #gamescore {
+        text-align: left;
+        background-color: teal;
+        color: #ffffff;
+        font-size: 30px;
+        height: 75px;
+        margin: 10px 0 0 0;
+    }
+
     </style>
 <div class="container">
     <div class="row">
-        <div class="col-md-4"><h1>Crystals Collector!</h1></div>
+        <div class="col-md-4 title"><h1>Crystals Collector!</h1></div>
         <div class="col-md-4"></div>
         <div class="col-md-4"></div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, incidunt rem amet quod quas iste optio ipsam enim quam velit, illo quasi! Dolore nam ipsum officia sequi laudantium eveniet delectus.</p>
+        <div class="col-md-5 instructions">
+            <p>You will be given a random number at the start of the game.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores inventore ab exercitationem voluptatibus autem nihil minima error deserunt. Explicabo tempore temporibus architecto eveniet! Reiciendis saepe non minima culpa odio? Obcaecati.</p>
+            <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati minus alias vitae nam cumque laborum, odio officia explicabo consequatur nemo, quibusdam, exercitationem a voluptatem recusandae officiis veritatis praesentium? Quod, dolore.</p></div>
+            <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+            
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+
+            <p>Each time the game starts, the value of each crystal will change.</p>
+        </div>
         
-        <div class="col-md-6"></div>
+        <div class="col-md-7"></div>
     </div>
 
     <!-- do you have to use div elements when defining columns?-->
@@ -37,7 +98,8 @@
         <div class="col-md-4">
             <div class="row">
                 <div class="col-md-8" id="gamenumber"></div>
-                <div class="col-md-4">
+                <div class="col-md-1"></div>
+                <div class="col-md-3 score">
                     <p id = "wins"></p>
                     <p id = "losses"></p>
                 </div>
@@ -67,7 +129,7 @@
         <div class="col-md-6"></div>
     </div>
     <div class="row">
-        <div class="col-md-3">Your total score is:</div>
+        <div class="col-md-3 total">Your total score is:</div>
         <div class="col-md-3"></div>
         <div class="col-md-3"></div>
         <div class="col-md-3"></div>
@@ -83,6 +145,6 @@
 
 </body>
 <!-- linking JS and JQuery. Ask if one should go before the other -->
-<script type-"text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 </html>

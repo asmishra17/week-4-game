@@ -7,11 +7,11 @@
 
 $(document).ready(function() {
 
-// define global variables
+// define global variables. I made some gems odd and some even, so the game would be more fair!
 var randomGameNumber = randomNumberFromRange(19, 120);
-var randomGem1Number = randomNumberFromRange(1, 12); 
+var randomGem1Number = randomNumberFromRange(1, 13); 
 var randomGem2Number = randomNumberFromRange(1, 12); 
-var randomGem3Number = randomNumberFromRange(1, 12); 
+var randomGem3Number = randomNumberFromRange(1, 13); 
 var randomGem4Number = randomNumberFromRange(1, 12); 
 var score = 0;
 var wins = 0; 
@@ -42,10 +42,12 @@ $(".gem1").click(function(){
     if (score > randomGameNumber) {
         losses++;
         $("#losses").html("Losses: "+ losses);
+        reset()
     } 
     else if (score === randomGameNumber) {
         wins++;
         $("#wins").html("Wins: " + wins);
+        reset()
     }
     else {
         // do nothing
@@ -59,10 +61,12 @@ $(".gem2").click(function(){
     if (score > randomGameNumber) {
         losses++;
         $("#losses").html("Losses: "+ losses);
+        reset()
     }
     else if (score === randomGameNumber) {
         wins++;
         $("#wins").html("Wins: " + wins);
+        reset()
     }
     else {
         // do nothing
@@ -76,10 +80,12 @@ $(".gem3").click(function(){
     if (score > randomGameNumber) {
         losses++;
         $("#losses").html("Losses: "+ losses);
+        reset()
     }
     else if (score === randomGameNumber) {
-    wins++;
-    $("#wins").html("Wins: " + wins);
+        wins++;
+        $("#wins").html("Wins: " + wins);
+        reset()
     }
     else {
         // do nothing
@@ -93,10 +99,12 @@ $(".gem4").click(function(){
     if (score > randomGameNumber) {
         losses++;
         $("#losses").html("Losses: "+ losses);
+        reset()
     }
     else if (score === randomGameNumber) {
         wins++;
         $("#wins").html("Wins: " + wins);
+        reset()
     }
     else {
         // do nothing
@@ -105,28 +113,21 @@ $(".gem4").click(function(){
 
 // reset function
 function reset () {
+    // regenerate random game number
+    var randomGameNumber = randomNumberFromRange(19, 120);
     $("#gamenumber").html(randomGameNumber);
+
+    // reset score to zero
     var score = 0;
     $("#gamescore").html(score);
-    $(".gem1").replace(randomGem1Number);
-    $(".gem2").replace(randomGem2Number);
-    $(".gem3").replace(randomGem3Number);
-    $(".gem4").replace(randomGem4Number);
+
+    $(".gem1").val(randomGem1Number);
+    $(".gem2").val(randomGem2Number);
+    $(".gem3").val(randomGem3Number);
+    $(".gem4").val(randomGem4Number);
 }
 
-// game conditions
-//function gameConditions () {
-   // if ( score > randomGameNumber ) {
-        //losses++;
-        //$("#losses").html("Losses: "+ losses);   
-    //}
-    //else if (score === randomGameNumber) {
-          
-    //}
-    //else {
-        //do nothing
-    //}
-//}
-
 initializeGame()
-})
+});
+
+// try putting everything in reset
