@@ -30,10 +30,10 @@ function initializeGame () {
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: "+ losses);
     $("#gamescore").html(score);
-    $(".gem1").append(randomGem1Number);
-    $(".gem2").append(randomGem2Number);
-    $(".gem3").append(randomGem3Number);
-    $(".gem4").append(randomGem4Number);
+    $(".gem1").appendto(randomGem1Number);
+    $(".gem2").appendto(randomGem2Number);
+    $(".gem3").appendto(randomGem3Number);
+    $(".gem4").appendto(randomGem4Number);
 }
 
 // add an on click listener for the gems, add random gem number to score
@@ -60,7 +60,12 @@ $(".gem4").click(function(){
 
 // reset function
 function reset () {
-
+    $("#gamenumber").html(randomGameNumber);
+    $("#gamescore").html(score);
+    $(".gem1").appendto(randomGem1Number);
+    $(".gem2").appendto(randomGem2Number);
+    $(".gem3").appendto(randomGem3Number);
+    $(".gem4").appendto(randomGem4Number);
 }
 // game conditions
 
@@ -68,7 +73,7 @@ function gameConditions () {
 if (randomGameNumber > score) {
     losses++;
     $("#losses").html("Losses: "+ losses);
-    // create reset function
+    reset();
 }
 else if (randomGameNumber === score) {
     wins++;
