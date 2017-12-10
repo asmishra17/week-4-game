@@ -1,9 +1,9 @@
 // psuedocode 
-// define variables
-// assign numbers to HTML elements
-// on.click functions that add gem numbers to game number
-// set conditions for game
-// restart game 
+// define variables (!)
+// assign numbers to HTML elements (!)
+// on.click functions that add gem numbers to game number (!)
+// set conditions for game (~)
+// restart game (~)
 
 $(document).ready(function() {
 
@@ -17,12 +17,11 @@ var score = 0;
 var wins = 0; 
 var losses = 0;
 
-// function to generate randomNumber for game and gems
+// function to generate randomNumber within range for game and gems
 function randomNumberFromRange(min, max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
-
-// start the game
+// setting up to start the game
 function initializeGame () {
 
 // starting game number, wins, losses, gem values
@@ -30,17 +29,20 @@ function initializeGame () {
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: "+ losses);
     $("#gamescore").html(score);
-    $(".gem1").appendto(randomGem1Number);
-    $(".gem2").appendto(randomGem2Number);
-    $(".gem3").appendto(randomGem3Number);
-    $(".gem4").appendto(randomGem4Number);
+    $(".gem1").append(randomGem1Number);
+    $(".gem2").append(randomGem2Number);
+    $(".gem3").append(randomGem3Number);
+    $(".gem4").append(randomGem4Number);
 }
 
 // add an on click listener for the gems, add random gem number to score
-
 $(".gem1").click(function(){
     score += randomGem1Number;
     $("#gamescore").html(score);
+    if (score > randomGameNumber) {
+        losses++;
+        $("#losses").html("Losses: "+ losses);
+    }
 })
 
 $(".gem2").click(function(){
@@ -61,29 +63,27 @@ $(".gem4").click(function(){
 // reset function
 function reset () {
     $("#gamenumber").html(randomGameNumber);
+    var score = 0;
     $("#gamescore").html(score);
-    $(".gem1").appendto(randomGem1Number);
-    $(".gem2").appendto(randomGem2Number);
-    $(".gem3").appendto(randomGem3Number);
-    $(".gem4").appendto(randomGem4Number);
+    $(".gem1").replace(randomGem1Number);
+    $(".gem2").replace(randomGem2Number);
+    $(".gem3").replace(randomGem3Number);
+    $(".gem4").replace(randomGem4Number);
 }
-// game conditions
 
-function gameConditions () {
-if (randomGameNumber > score) {
-    losses++;
-    $("#losses").html("Losses: "+ losses);
-    reset();
-}
-else if (randomGameNumber === score) {
-    wins++;
-    $("#wins").html("Wins: " + wins);
-    // create reset function
-}
-else {
-    //do nothing
-}
-}
+// game conditions
+//function gameConditions () {
+   // if ( score > randomGameNumber ) {
+        //losses++;
+        //$("#losses").html("Losses: "+ losses);   
+    //}
+    //else if (score === randomGameNumber) {
+          
+    //}
+    //else {
+        //do nothing
+    //}
+//}
 
 initializeGame()
 })
