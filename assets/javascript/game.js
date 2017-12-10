@@ -42,12 +42,31 @@ $(".gem1").click(function(){
     if (score > randomGameNumber) {
         losses++;
         $("#losses").html("Losses: "+ losses);
+    } 
+    else if (score === randomGameNumber) {
+        wins++;
+        $("#wins").html("Wins: " + wins);
+    }
+    else {
+        // do nothing
     }
 })
 
 $(".gem2").click(function(){
     score += randomGem2Number;
     $("#gamescore").html(score);
+
+    if (score > randomGameNumber) {
+        losses++;
+        $("#losses").html("Losses: "+ losses);
+    }
+    else if (score === randomGameNumber) {
+        wins++;
+        $("#wins").html("Wins: " + wins);
+    }
+    else {
+        // do nothing
+    }
 })
 
 $(".gem3").click(function(){
