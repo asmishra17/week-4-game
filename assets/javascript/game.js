@@ -2,7 +2,7 @@
 // define variables (!)
 // assign numbers to HTML elements (!)
 // on.click functions that add gem numbers to game number (!)
-// set conditions for game (~)
+// set conditions for game (!)
 // restart game (~)
 
 $(document).ready(function() {
@@ -21,18 +21,20 @@ var losses = 0;
 function randomNumberFromRange(min, max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
+
 // setting up to start the game
 function initializeGame () {
 
-// starting game number, wins, losses, gem values
+// starting game number, wins, losses
     $("#gamenumber").html(randomGameNumber);
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: "+ losses);
     $("#gamescore").html(score);
-    $(".gem1").append(randomGem1Number);
-    $(".gem2").append(randomGem2Number);
-    $(".gem3").append(randomGem3Number);
-    $(".gem4").append(randomGem4Number);
+    // below is not needed! 
+    //$(".firstnumber").append(randomGem1Number);
+    //$(".secondnumber").append(randomGem2Number);
+    //$(".thirdnumber").append(randomGem3Number);
+    //$(".fourthnumber").append(randomGem4Number);
 }
 
 // add an on click listener for the gems, add random gem number to score
@@ -121,13 +123,13 @@ function reset () {
     var score = 0;
     $("#gamescore").html(score);
 
-    $(".gem1").val(randomGem1Number);
-    $(".gem2").val(randomGem2Number);
-    $(".gem3").val(randomGem3Number);
-    $(".gem4").val(randomGem4Number);
+    var randomGem1Number = randomNumberFromRange(1, 13); 
+    var randomGem2Number = randomNumberFromRange(1, 12); 
+    var randomGem3Number = randomNumberFromRange(1, 13); 
+    var randomGem4Number = randomNumberFromRange(1, 12);
+
 }
 
 initializeGame()
 });
 
-// try putting everything in reset
