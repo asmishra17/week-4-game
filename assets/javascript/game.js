@@ -1,10 +1,4 @@
-// psuedocode 
-// define variables (!)
-// assign numbers to HTML elements (!)
-// on.click functions that add gem numbers to game number (!)
-// set conditions for game (!)
-// restart game (x)
-
+// 
 $(document).ready(function() {
 
 // define global variables. I made some gems odd and some even, so the game would be more fair!
@@ -94,6 +88,7 @@ function reset () {
     $("#gamenumber").html(randomGameNumber);
     // reset score to zero
     score = 0;
+    $("#gamescore").html(score);
     // reset gem numbers
     randomGem1Number = randomNumberFromRange(1, 13); 
     randomGem2Number = randomNumberFromRange(1, 12); 
