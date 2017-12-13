@@ -21,14 +21,14 @@ function gameConditions () {
         losses++;
         $("#losses").html("Losses: "+ losses);
         displayAlertLoss();
-        setTimeout(reset, 1000);
+        setTimeout(reset, 1500);
 
     } 
     else if (score === randomGameNumber) {
         wins++;
         $("#wins").html("Wins: " + wins);
         displayAlertWin();
-        setTimeout(reset, 1000);
+        setTimeout(reset, 1500);
     }
     else {
         // do nothing
@@ -52,12 +52,12 @@ function initializeGame () {
 
 // function to display alert
 function displayAlertWin () {
-    $(".alert").text("You won!"); 
+    $(".alert").text("YOU WON!"); 
     $(".alert").show();
 }
 
 function displayAlertLoss () {
-    $(".alert").text("You lost :(");
+    $(".alert").text("YOU LOST! :(");
     $(".alert").show();
 }
 
@@ -99,14 +99,17 @@ score = 0;
 function reset () {
     //hide alert
     $(".alert").hide();
+
     // regenerate random game number
     randomGameNumber = randomNumberFromRange(19, 120);
     $("#gamenumber").html(randomGameNumber);
+
     // reset score to zero
     score = 0;
+    
     $("#gamescore").html(score);
     // reset gem numbers
-    randomGem1Number = randomNumberFromRange(1, 13); 
+    randomGem1Number = randomNumberFromRange(1, 13); // try using just randomGem1Number()
     randomGem2Number = randomNumberFromRange(1, 12); 
     randomGem3Number = randomNumberFromRange(1, 13); 
     randomGem4Number = randomNumberFromRange(1, 12);
