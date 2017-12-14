@@ -30,7 +30,6 @@ body {
 
 .score {
     text-align: center;
-    font-style: bolder;
     background-color: #FFB9CD;
     padding: 15px;
     margin: 15px 0 0 0;
@@ -39,6 +38,7 @@ body {
 
 .alert {
     text-align: center;
+    font-size: 25px;
     background-color: #BC7C4B;
     color: #FFFFFF;
     height: 95px;
@@ -46,11 +46,12 @@ body {
     border: solid #FFFCED 3px;
 }
 
-.gem {
+.snack {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 10px;
-    margin: 15px 0 0 0;      
+    margin: 15px 0 0 0;    
+    border: solid #FBE05F 3px;  
 }
 
 .total {
