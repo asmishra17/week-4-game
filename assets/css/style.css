@@ -2,46 +2,48 @@ body {
     background-image: url("regal.png");
 }
 
-body.background-image {
-    opacity: 0.8;
-}
-
 .title {
     text-align: center;
-    color: #ffffff;
-    background-color: #4aaaa5;
+    color: #FFFFFF;
+    background-color: #7FD27A;
     padding: 5px 10px 10px 10px;
-    margin-top: 10px
+    margin-top: 10px;
+    border: solid #FBE05F 3px;
 }
 
 .instructions {
-    background-color: peachpuff;
+    background-color: #B3DAEA;
     padding: 20px;
     margin-top: 15px; 
+    border: solid #FFFBA4 3px;
 }
 
 #gamenumber {
     text-align: left;
     font-size: 30px;
-    background-color: mediumspringgreen;
-    height: 96px;
+    background-color: #C1587F;
+    color: #FFFFFF;
+    height: 95px;
     margin-top: 15px;
+    border: solid #FFF9BF 3px;
 }
 
 .score {
     text-align: center;
-    background-color: #4aaaa5;
-    color: #ffffff;
-    padding: 18px;
+    font-style: bolder;
+    background-color: #FFB9CD;
+    padding: 15px;
     margin: 15px 0 0 0;
+    border: solid #FFF9BF 3px;
 }
 
 .alert {
     text-align: center;
-    background-color: #4aaaa5;
-    color: #ffffff;
-    height: 96px;
+    background-color: #BC7C4B;
+    color: #FFFFFF;
+    height: 95px;
     margin: 15px 0 0 5px;
+    border: solid #FFFCED 3px;
 }
 
 .gem {
@@ -53,17 +55,19 @@ body.background-image {
 
 .total {
     text-align: left;
-    background-color: #4aaaa5;
+    background-color: #BC7C4B;;
     color: #ffffff;
     padding: 5px;
     margin: 15px 0 0 0;
+    border: solid #FFFCED 3px;
 }
 
 #gamescore {
     text-align: left;
-    background-color: #4aaaa5;
+    background-color: #BC7C4B;
     color: #ffffff;
     font-size: 30px;
     height: 75px;
     margin: 10px 0 0 0;
+    border: solid #FFFCED 3px;
 }

@@ -21,14 +21,14 @@ function gameConditions () {
         losses++;
         $("#losses").html("Losses: "+ losses);
         displayAlertLoss();
-        setTimeout(reset, 1500);
+        setTimeout(reset, 2000);
 
     } 
     else if (score === randomGameNumber) {
         wins++;
         $("#wins").html("Wins: " + wins);
         displayAlertWin();
-        setTimeout(reset, 1500);
+        setTimeout(reset, 2000);
     }
     else {
         // do nothing
