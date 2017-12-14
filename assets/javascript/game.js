@@ -101,7 +101,7 @@ function reset () {
     
     $("#gamescore").html(score);
     // reset gem numbers
-    randomSnack1Number = randomNumberFromRange(1, 12); // try using just randomGem1Number()
+    randomSnack1Number = randomNumberFromRange(1, 12); 
     randomSnack2Number = randomNumberFromRange(1, 12); 
     randomSnack3Number = randomNumberFromRange(1, 12); 
     randomSnack4Number = randomNumberFromRange(1, 12);
