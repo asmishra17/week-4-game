@@ -38,11 +38,12 @@ body {
 
 .alert {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     background-color: #BC7C4B;
     color: #FFFFFF;
+    padding: 15px;
     height: 95px;
-    margin: 15px 0 0 5px;
+    margin: 15px 0 0 0;
     border: solid #FFFCED 3px;
 }
 

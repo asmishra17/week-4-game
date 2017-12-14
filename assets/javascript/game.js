@@ -48,12 +48,12 @@ function gameConditions () {
 
 // win or loss alert
 function displayAlertWin () {
-    $(".alert").text("YOU WON"); 
+    $(".alert").text("YOU WON!"); 
     $(".alert").show();
 }
 
 function displayAlertLoss () {
-    $(".alert").text("YOU LOST");
+    $(".alert").text("YOU LOST!");
     $(".alert").show();
 }
 
