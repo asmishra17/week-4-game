@@ -52,7 +52,22 @@ body {
     background-color: #FFFFFF;
     padding: 10px;
     margin: 15px 0 0 0;    
-    border: solid #FBE05F 3px;  
+}
+
+.snack1 {
+    border: solid #E94083 3px; 
+}
+
+.snack2 {
+    border: solid #F5D132 3px;
+}
+
+.snack3 {
+    border: solid #FF9900 3px; 
+}
+
+.snack4 {
+    border: solid #C5DD7D 3px;
 }
 
 .total {
